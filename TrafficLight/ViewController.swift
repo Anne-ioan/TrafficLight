@@ -11,20 +11,23 @@ final class ViewController: UIViewController {
     
     
     @IBOutlet var startButton: UIButton!
-    @IBOutlet var trafficStack: UIStackView!
+    @IBOutlet var redLabel: UIView!
+    @IBOutlet var yellowLabel: UIView!
+    @IBOutlet var greenLabel: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeCornerRadiusStack(75)
+        changeCornerRadiusStack(90)
         startButton.layer.cornerRadius = 15
         
     }
     @IBAction func changingStartButton() {
         
     }
-    func changeCornerRadiusStack(_ radius: CGFloat) {
-        trafficStack.layer.cornerRadius = radius
-        
+    private func changeCornerRadiusStack(_ radius: Int) {
+        redLabel.layer.cornerRadius = CGFloat(radius)
+        yellowLabel.layer.cornerRadius = CGFloat(radius)
+        greenLabel.layer.cornerRadius = CGFloat(radius)
     }
     
 }

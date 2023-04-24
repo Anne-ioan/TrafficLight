@@ -74,8 +74,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="greenLabel" destination="eTM-nZ-d9C" id="hwy-SG-sBJ"/>
+                        <outlet property="redLabel" destination="CP5-mj-h9n" id="Uoz-nL-Kqa"/>
                         <outlet property="startButton" destination="SQt-GQ-BaX" id="RMe-v7-9pB"/>
-                        <outlet property="trafficStack" destination="MdA-fz-2WY" id="Luv-k7-Ie5"/>
+                        <outlet property="yellowLabel" destination="zeP-4C-Jzb" id="TLj-90-WfT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
