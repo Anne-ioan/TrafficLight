@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Om-br-AFh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQt-GQ-BaX">
+                                        <rect key="frame" x="110" y="466.5" width="100" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50129544010000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1PB-d8-muZ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Eyv-Pz-DUJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changingStartButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZr-8x-uKy"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-fz-2WY">
+                                        <rect key="frame" x="110" y="58" width="100" height="316"/>
+                                        <subviews>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CP5-mj-h9n">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                            </view>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeP-4C-Jzb">
+                                                <rect key="frame" x="0.0" y="108" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                            </view>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTM-nZ-d9C">
+                                                <rect key="frame" x="0.0" y="216" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstItem="MdA-fz-2WY" firstAttribute="leading" secondItem="7Om-br-AFh" secondAttribute="leading" constant="110" id="4md-T8-emC"/>
+                                    <constraint firstItem="SQt-GQ-BaX" firstAttribute="top" secondItem="MdA-fz-2WY" secondAttribute="bottom" constant="92.5" id="DbO-4w-PHf"/>
+                                    <constraint firstAttribute="trailing" secondItem="MdA-fz-2WY" secondAttribute="trailing" constant="110" id="PGk-O5-wOu"/>
+                                    <constraint firstItem="SQt-GQ-BaX" firstAttribute="centerX" secondItem="7Om-br-AFh" secondAttribute="centerX" id="a8Y-2t-UjG"/>
+                                    <constraint firstAttribute="bottom" secondItem="SQt-GQ-BaX" secondAttribute="bottom" multiplier="1.1" id="d2U-HW-CLa"/>
+                                    <constraint firstItem="MdA-fz-2WY" firstAttribute="top" secondItem="7Om-br-AFh" secondAttribute="top" constant="58" id="oiS-n0-B2u"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Om-br-AFh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7On-JL-ojU"/>
+                            <constraint firstItem="7Om-br-AFh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QVX-H7-J20"/>
+                            <constraint firstItem="7Om-br-AFh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SOI-gC-bgr"/>
+                            <constraint firstAttribute="bottom" secondItem="7Om-br-AFh" secondAttribute="bottom" id="nh8-wp-Efb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="SQt-GQ-BaX" id="RMe-v7-9pB"/>
+                        <outlet property="trafficStack" destination="MdA-fz-2WY" id="Luv-k7-Ie5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="3.1484257871064472"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

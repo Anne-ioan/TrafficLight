@@ -7,13 +7,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
+    
+    @IBOutlet var startButton: UIButton!
+    @IBOutlet var trafficStack: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        changeCornerRadiusStack(75)
+        startButton.layer.cornerRadius = 15
+        
     }
-
-
+    @IBAction func changingStartButton() {
+        
+    }
+    func changeCornerRadiusStack(_ radius: CGFloat) {
+        trafficStack.layer.cornerRadius = radius
+        
+    }
+    
 }
-
